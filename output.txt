@@ -1,0 +1,45 @@
+EEEE
+======================================================================
+ERROR: test_creating_circle_with_greaterthan_radius (__main__.TestCircleCreation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest1.py", line 48, in test_creating_circle_with_greaterthan_radius
+    c = Circle(1000.1)
+  File "unittest1.py", line 12, in __init__
+    if (self.radius.isnumeric()) == False:
+AttributeError: 'float' object has no attribute 'isnumeric'
+
+======================================================================
+ERROR: test_creating_circle_with_negative_radius (__main__.TestCircleCreation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest1.py", line 40, in test_creating_circle_with_negative_radius
+    c = Circle(2.5)
+  File "unittest1.py", line 12, in __init__
+    if (self.radius.isnumeric()) == False:
+AttributeError: 'float' object has no attribute 'isnumeric'
+
+======================================================================
+ERROR: test_creating_circle_with_nonnumeric_radius (__main__.TestCircleCreation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest1.py", line 57, in test_creating_circle_with_nonnumeric_radius
+    c = Circle("hello")
+  File "unittest1.py", line 13, in __init__
+    raise TypeError("radius must be a number")
+TypeError: radius must be a number
+
+======================================================================
+ERROR: test_creating_circle_with_numeric_radius (__main__.TestCircleCreation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest1.py", line 32, in test_creating_circle_with_numeric_radius
+    c1 = Circle(2.5)
+  File "unittest1.py", line 12, in __init__
+    if (self.radius.isnumeric()) == False:
+AttributeError: 'float' object has no attribute 'isnumeric'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+FAILED (errors=4)
