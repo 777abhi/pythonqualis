@@ -2,7 +2,6 @@ import inspect
 import re
 import unittest
 import math
-
 # Define class 'Circle' and its methods with proper doctests:
 class Circle:
     
@@ -58,5 +57,50 @@ class TestCircleCreation(unittest.TestCase):
         c = Circle(1000.1)
         self.assertEqual(c.radius,1000.1)
         self.assertRaises(ValueError)
-
 if __name__ == '__main__':
+    
+    fptr = open('output.txt', 'w')
+    
+    runner = unittest.TextTestRunner(fptr)
+    
+    unittest.main(testRunner=runner, exit=False)
+    
+    fptr.close()
+    
+    with open('output.txt') as fp:
+        output_lines = fp.readlines()
+    
+    
+    pass_count = [ len(re.findall(r'\.', line)) for line in output_lines if line.startswith('.')
+                     and line.endswith('.\n')]
+    
+    
+    pass_count = pass_count[0]
+                       
+    print(str(pass_count))
+                       
+    doc1 = inspect.getsource(TestCircleCreation.test_creating_circle_with_numeric_radius)
+    doc2 = inspect.getsource(TestCircleCreation.test_creating_circle_with_negative_radius)
+    doc3 = inspect.getsource(TestCircleCreation.test_creating_circle_with_greaterthan_radius)
+    doc4 = inspect.getsource(TestCircleCreation.test_creating_circle_with_nonnumeric_radius)
+    
+    assert1_count = len(re.findall(r'assertEqual', doc1))
+    
+    print(str(assert1_count))
+    
+    assert1_count = len(re.findall(r'assertEqual', doc2))
+    assert2_count = len(re.findall(r'assertRaises', doc2))
+    
+    print(str(assert1_count), str(assert2_count))
+    
+    assert1_count = len(re.findall(r'assertEqual', doc3))
+    assert2_count = len(re.findall(r'assertRaises', doc3))
+    
+    print(str(assert1_count), str(assert2_count))
+    
+    assert1_count = len(re.findall(r'assertEqual', doc4))
+    assert2_count = len(re.findall(r'assertRaises', doc4))
+    
+    print(str(assert1_count), str(assert2_count))
+    
+    
