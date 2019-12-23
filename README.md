@@ -4,6 +4,7 @@ This repo is to demonstrate the usage of
 
 * doctest
 * unittest
+* nose
 * pytest
 
 with examples 
