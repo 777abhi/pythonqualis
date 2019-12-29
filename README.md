@@ -1,4 +1,4 @@
-# pythonqualis
+# pythonqualis - Test Frameworks for python
 
 This repo is to demonstrate the usage of 
 
