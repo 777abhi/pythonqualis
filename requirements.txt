@@ -1,6 +1,5 @@
 pytest
 numpy
-unittest
 nose
 pstats
 cProfile
