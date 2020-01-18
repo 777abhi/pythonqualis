@@ -29,6 +29,6 @@ print(variance)
 print(mode)
 
 def test_sample():
-    assert 2 == 2
+    assert 4 == 4
 
 from test_co2 import TestIsEvenMethod
