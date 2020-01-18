@@ -30,3 +30,5 @@ print(mode)
 
 def test_sample():
     assert 1 == 1
+
+from test_co2 import TestIsEvenMethod

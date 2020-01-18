@@ -33,7 +33,3 @@ class TestIsEvenMethod(unittest.TestCase):
         self.assertEqual(True,isEven(10))
     def test_isEven3(self):
         self.assertEqual(True,isEven(10))
-
-
-
-unittest.main()
