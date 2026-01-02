@@ -7,13 +7,14 @@ class InsufficientException(Exception):
 class MobileInventory:
   balance_inventory = {}
   
-  def __init__(self):
-    self.inventory = None
-    balance_inventory = {}
-  
-  def __init__(self, inventory,balance_inventory):
-    self.inventory = inventory
-    self.balance_inventory = self.inventory
+  def __init__(self, inventory=None, balance_inventory=None):
+    if inventory is None:
+        self.inventory = {}
+        self.balance_inventory = {}
+    else:
+        self.inventory = inventory
+        self.balance_inventory = self.inventory
+
     if (isinstance(self.inventory, dict)) == False:
       raise TypeError("Input inventory must be a dictionary")
     for key in self.inventory:

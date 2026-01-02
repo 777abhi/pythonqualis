@@ -5,7 +5,7 @@ class TestingInventoryCreation:
     def test_creating_empty_inventory(self):
         assert 1==1
         c = MobileInventory();
-        assert c=={}
+        assert c.inventory == {}
     def test_creating_specified_inventory(self):
         assert 1==1
     def test_creating_inventory_with_list(self):

@@ -1,4 +1,8 @@
-__pycache__/test_co2.cpython-38-pytest-5.2.2.pyc
-__pycache__/tests.cpython-38-pytest-5.2.2.pyc
-__pycache__/tests.cpython-38-pytest-5.2.2.pyc
-__pycache__/tests.cpython-38-pytest-5.2.2.pyc
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
